@@ -187,7 +187,7 @@ enum XMPPStreamConfig
 	numberOfBytesSent = 0;
 	numberOfBytesReceived = 0;
 	
-	hostPort = 5222;
+	hostPort = 446;
 	keepAliveInterval = DEFAULT_KEEPALIVE_INTERVAL;
 	keepAliveData = [@" " dataUsingEncoding:NSUTF8StringEncoding];
 	
@@ -4153,11 +4153,11 @@ enum XMPPStreamConfig
 		// As per the RFC:
 		// 
 		// "If the SRV lookup fails, the fallback is a normal IPv4/IPv6 address record resolution
-		// to determine the IP address, using the "xmpp-client" port 5222, registered with the IANA."
+		// to determine the IP address, using the "xmpp-client" port 446, registered with the IANA."
 		// 
 		// In other words, just try connecting to the domain specified in the JID.
 		
-		success = [self connectToHost:[myJID_setByClient domain] onPort:5222 withTimeout:XMPPStreamTimeoutNone error:&connectError];
+		success = [self connectToHost:[myJID_setByClient domain] onPort:446 withTimeout:XMPPStreamTimeoutNone error:&connectError];
 	}
 	
 	if (!success)
